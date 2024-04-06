@@ -24,6 +24,7 @@ export default function SignUp() {
         },
         body: JSON.stringify(formData),
       });
+      //if there is a error we set the error
       const data = await res.json();
       console.log(data);
       if (data.success === false) {
@@ -31,6 +32,7 @@ export default function SignUp() {
         setError(data.message);
         return;
       }
+      //if there is no error
       setLoading(false);
       setError(null);
       navigate('/signin');
