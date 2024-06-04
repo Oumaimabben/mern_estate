@@ -9,7 +9,7 @@ export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
   const [saleListings, setSaleListings] = useState([]);
   const [rentListings, setRentListings] = useState([]);
-
+ 
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
@@ -22,6 +22,8 @@ export default function Home() {
         fetchRentListings();
       } catch (error) {
         console.error(error);
+        console.log(offerListings);
+        
       }
     };
 
@@ -74,7 +76,7 @@ export default function Home() {
           to={'/search'}
           className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
         >
-          Let's get started...
+           Let&apos;s get started...
         </Link>
       </div>
 

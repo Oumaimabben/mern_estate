@@ -72,5 +72,6 @@ export const signup = async (req, res, next) => {
       res.status(200).json('User has been logged out!');
     } catch (error) {
       next(error);
+      console.log('cc');
     }
   };
